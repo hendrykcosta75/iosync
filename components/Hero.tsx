@@ -4,14 +4,14 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 lg:pt-48 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-36 lg:pt-48 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-purple/20 blur-[120px] rounded-full -z-10 pointer-events-none" />
       
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 relative z-10 flex flex-col items-center gap-16">
         
         {/* Text Content */}
-        <div className="text-center lg:text-left z-20">
+        <div className="text-center z-20 max-w-5xl mx-auto flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-400 text-lg md:text-xl mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light"
+            className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed font-light"
           >
             Transformamos a sua visão em realidade digital. Na iosync, materializamos ideias inovadoras através de soluções tecnológicas robustas e personalizadas, construindo hoje o futuro do seu negócio.
           </motion.p>
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center"
           >
             <button className="group bg-white text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-200 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
               Começar agora
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative flex justify-center perspective-1000"
+          className="relative flex justify-center perspective-1000 w-full max-w-2xl"
         >
           {/* Glowing Aura behind image */}
           <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple/40 to-blue-600/20 blur-[80px] rounded-full animate-pulse-slow" />
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
           <motion.div
             animate={{ y: [0, -25, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="relative z-10 w-full max-w-[500px] aspect-square"
+            className="relative z-10 w-full aspect-video md:aspect-[16/9]"
           >
             <img 
               src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=1000&auto=format&fit=crop" 
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-sm"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-sm hidden md:flex"
       >
         <span>Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-gray-500 to-transparent"></div>
