@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Spline from '@splinetool/react-spline';
 
 const Hero: React.FC = () => {
   return (
@@ -65,7 +64,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative flex justify-center perspective-1000 w-full max-w-2xl"
+          className="relative flex justify-center perspective-1000 w-full max-w-4xl"
         >
           {/* Glowing Aura behind image */}
           <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple/40 to-blue-600/20 blur-[80px] rounded-full animate-pulse-slow" />
@@ -75,33 +74,11 @@ const Hero: React.FC = () => {
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             className="relative z-10 w-full aspect-square md:aspect-video"
           >
-            <Spline
-              scene="https://prod.spline.design/gVnDVLV49B6Kz4sc/scene.splinecode"
-              style={{ backgroundColor: 'transparent' }}
-              onLoad={() => {
-                const removeLogo = () => {
-                  const logo = document.querySelector('a[href*="spline.design"]');
-                  if (logo) {
-                    logo.remove();
-                  }
-                };
-                // Check immediately and periodically for a few seconds
-                removeLogo();
-                const interval = setInterval(removeLogo, 100);
-                setTimeout(() => clearInterval(interval), 5000);
-              }}
+            <img
+              src="/assets/gatinho.gif"
+              alt="Animação 3D"
+              className="w-full h-full object-contain rounded-2xl"
             />
-            <style>{`
-              a[href*="spline.design"],
-              #spline-watermark {
-                display: none !important;
-                opacity: 0 !important;
-                visibility: hidden !important;
-                pointer-events: none !important;
-                position: absolute;
-                z-index: -1000;
-              }
-            `}</style>
           </motion.div>
         </motion.div>
       </div>
