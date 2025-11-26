@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Spline from '@splinetool/react-spline';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-36 lg:pt-48 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-purple/20 blur-[120px] rounded-full -z-10 pointer-events-none" />
-      
+
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center gap-16">
-        
+
         {/* Text Content */}
         <div className="text-center z-20 max-w-5xl mx-auto flex flex-col items-center">
           <motion.div
@@ -68,32 +69,42 @@ const Hero: React.FC = () => {
         >
           {/* Glowing Aura behind image */}
           <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple/40 to-blue-600/20 blur-[80px] rounded-full animate-pulse-slow" />
-          
+
           <motion.div
             animate={{ y: [0, -25, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="relative z-10 w-full aspect-video md:aspect-[16/9]"
+            className="relative z-10 w-full aspect-square md:aspect-video"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=1000&auto=format&fit=crop" 
-              alt="3D Future Interface" 
-              className="w-full h-full object-cover rounded-[2rem] shadow-2xl border border-white/10 opacity-90 mask-image-gradient"
-              style={{ maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)' }}
+            <Spline
+              scene="https://prod.spline.design/gVnDVLV49B6Kz4sc/scene.splinecode"
+              style={{ backgroundColor: 'transparent' }}
+              onLoad={() => {
+                const removeLogo = () => {
+                  const logo = document.querySelector('a[href*="spline.design"]');
+                  if (logo) {
+                    logo.remove();
+                  }
+                };
+                // Check immediately and periodically for a few seconds
+                removeLogo();
+                const interval = setInterval(removeLogo, 100);
+                setTimeout(() => clearInterval(interval), 5000);
+              }}
             />
+            <style>{`
+              a[href*="spline.design"],
+              #spline-watermark {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+                position: absolute;
+                z-index: -1000;
+              }
+            `}</style>
           </motion.div>
         </motion.div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-sm hidden md:flex"
-      >
-        <span>Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-gray-500 to-transparent"></div>
-      </motion.div>
     </section>
   );
 };
