@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onChatOpen: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
   return (
     <section className="relative min-h-screen flex items-center pt-36 lg:pt-48 pb-20 overflow-hidden">
       {/* Background Elements */}
@@ -16,11 +20,56 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-purple text-xs font-semibold mb-8 uppercase tracking-wider"
+            className="relative inline-flex mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-brand-purple animate-pulse" />
-            Futuro da Tecnologia
+            {/* Animated glowing line border */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ overflow: 'visible' }}>
+              <rect
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                rx="9999"
+                fill="none"
+                stroke="url(#borderGradient)"
+                strokeWidth="3"
+                strokeDasharray="60 340"
+                className="border-line-animation"
+              />
+              <defs>
+                <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="rgba(139, 92, 246, 0)" />
+                  <stop offset="20%" stopColor="rgba(139, 92, 246, 0.5)" />
+                  <stop offset="50%" stopColor="rgba(139, 92, 246, 1)" />
+                  <stop offset="80%" stopColor="rgba(139, 92, 246, 0.5)" />
+                  <stop offset="100%" stopColor="rgba(139, 92, 246, 0)" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            {/* Badge content */}
+            <div className="relative inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/80 border border-white/10 text-brand-purple text-xs font-semibold uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-brand-purple animate-pulse" />
+              Futuro da Tecnologia
+            </div>
           </motion.div>
+
+          <style jsx>{`
+            @keyframes border-travel {
+              0% {
+                stroke-dashoffset: 400;
+              }
+              100% {
+                stroke-dashoffset: 0;
+              }
+            }
+
+            .border-line-animation {
+              animation: border-travel 3s linear infinite;
+              filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.6)) 
+                      drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
+            }
+          `}</style>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -50,11 +99,14 @@ const Hero: React.FC = () => {
             className="flex flex-col sm:flex-row items-center gap-4 justify-center"
           >
             <button className="group bg-white text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-200 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              Começar agora
+              Nossos Projetos
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 rounded-full font-semibold text-white border border-white/10 hover:bg-white/5 transition-colors">
-              Ver demonstração
+            <button
+              onClick={onChatOpen}
+              className="px-8 py-4 rounded-full font-semibold text-white border border-white/10 hover:bg-white/5 transition-colors"
+            >
+              Fale Conosco
             </button>
           </motion.div>
         </div>
