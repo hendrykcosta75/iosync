@@ -54,7 +54,8 @@ const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
             </div>
           </motion.div>
 
-          <style jsx>{`
+          <style dangerouslySetInnerHTML={{
+            __html: `
             @keyframes border-travel {
               0% {
                 stroke-dashoffset: 400;
@@ -69,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
               filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.6)) 
                       drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
             }
-          `}</style>
+          `}} />
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
