@@ -54,7 +54,7 @@ const CTA: React.FC = () => {
             Enviar email
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
-          <a href="https://wa.me/558291986304" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+          <a href="#contato" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
             <button className="w-full px-8 py-4 bg-[#1a1a1a] hover:bg-[#252525] border border-white/10 text-white rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2">
               <MessageSquare className="w-5 h-5" />
               Chat conosco

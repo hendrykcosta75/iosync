@@ -1,12 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface HeroProps {
-  onChatOpen: () => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
+const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-36 lg:pt-48 pb-20 overflow-hidden">
       {/* Background Elements */}
@@ -99,16 +96,21 @@ const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center gap-4 justify-center"
           >
-            <button className="group bg-white text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-200 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              Nossos Projetos
+            <Link
+              to="/servicos"
+              className="group bg-white text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-200 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+            >
+              Nossos Serviços
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={onChatOpen}
+            </Link>
+            <a
+              href="https://example.com/contato"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-full font-semibold text-white border border-white/10 hover:bg-white/5 transition-colors"
             >
               Fale Conosco
-            </button>
+            </a>
           </motion.div>
         </div>
 

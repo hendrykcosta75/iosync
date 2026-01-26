@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     { name: 'Início', href: '#', external: false },
     { name: 'Sobre', href: '#sobre', external: false },
     { name: 'Soluções', href: '#solucoes', external: false },
-    { name: 'Contato', href: 'https://wa.me/558291986304', external: true },
+    { name: 'Contato', href: '#contato', external: false },
   ];
 
   return (
