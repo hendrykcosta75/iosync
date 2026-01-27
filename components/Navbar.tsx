@@ -16,9 +16,10 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Início', href: '#', external: false },
+    { name: 'Início', href: '/', external: false },
     { name: 'Sobre', href: '#sobre', external: false },
-    { name: 'Soluções', href: '#solucoes', external: false },
+    { name: 'Servicos', href: '/servicos', external: false },
+    { name: 'Preço', href: '/precos', external: false },
     { name: 'Contato', href: '#contato', external: false },
   ];
 
@@ -32,7 +33,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="block">
+        <a href="/" className="block">
           <Logo />
         </a>
 

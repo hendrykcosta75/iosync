@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             {[Github, Twitter, Linkedin, Instagram].map((Icon, idx) => (
               <a 
                 key={idx} 
-                href="#" 
+                href="/" 
                 className="text-gray-500 hover:text-white transition-colors hover:scale-110 transform duration-200"
               >
                 <Icon className="w-5 h-5" />
@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} iosync Inc. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacidade</a>
-            <a href="#" className="hover:text-white transition-colors">Termos</a>
+            <a href="/" className="hover:text-white transition-colors">Privacidade</a>
+            <a href="/" className="hover:text-white transition-colors">Termos</a>
           </div>
         </div>
       </div>

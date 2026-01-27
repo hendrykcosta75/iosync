@@ -8,6 +8,7 @@ import Features from './components/Features';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ServicesPage from './components/ServicesPage';
+import PricingPage from './components/PricingPage';
 
 const LandingPage: React.FC = () => (
   <>
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/servicos" element={<ServicesPage />} />
+          <Route path="/precos" element={<PricingPage />} />
         </Routes>
       </main>
     </Router>

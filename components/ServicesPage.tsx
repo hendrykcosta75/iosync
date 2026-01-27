@@ -24,25 +24,105 @@ const products: ServiceProduct[] = [
             'Gestão Orçamentária Completa',
             'Acompanhamento de Projetos em Tempo Real',
             'Relatórios e Dashboards Dinâmicos',
-            'Assistente IA - Plaguinha'
+            'Assistente IA - Gatinho'
         ],
         image: '/assets/projetos/PlataformaPlanejamento.png',
         gradient: 'from-blue-500 to-cyan-400'
     },
     {
         id: 'education',
-        name: 'Sistema de Educação',
-        title: 'Transformando o Futuro Escolar',
-        description: 'Ferramenta integrada para gestão escolar, conectando alunos, professores e administração em um único ambiente digital intuitivo.',
+        name: 'Sistema de Cursos',
+        title: 'Democratizando o acesso ao Conhecimento',
+        description: 'Ferramenta integrada para gestão de cursos, democratizando a oferta de conhecimento para a população.',
         features: [
-            'Diário de Classe Digital',
-            'Controle de Frequência e Notas',
-            'Portal do Aluno e Responsável',
-            'Gestão de Matrículas Online'
+            'Análise de Inscritos e Matriculados',
+            'Envio de E-mail de Confirmação Automático',
+            'Assistente IA - Gatinho',
+            'Insights e Relatórios Inteligentes'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/assets/gatinho.gif',
+        image: '/public/assets/projetos/SistemaCursos.png',
         gradient: 'from-brand-purple to-pink-500'
+    },
+
+    {
+        id: 'links',
+        name: 'Sistema de Links',
+        title: 'Acesso para todos os Serviços da Prefeitura',
+        description: 'Sistema de Links que possibilita acesso para todos os serviços da prefeitura de forma rápida e descomplicada',
+        features: [
+            'Painel Administrativo para Inserção de Links',
+            'Ordernação de Links via Drag and Drop',
+            'Otimização de Cache para Carregamento Rápido',
+            'Integração com Assistente de IA - Gatinho'
+        ],
+        // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
+        image: '/public/assets/projetos/SistemaLinks.png',
+        gradient: 'from-brand-purple to-green-500'
+    },
+
+    {
+        id: 'empregos',
+        name: 'Sistema de Empregos',
+        title: 'Fomentando Empregos e Desenvolvimento Local',
+        description: 'Sistema de Empregos que possibilita a criação de vagas e a busca de empregos na cidade fomentando empregos e desenvolvimento local',
+        features: [
+            'Criação de Vagas',
+            'Busca de Empregos',
+            'Relatórios e Dashboards Dinâmicos',
+            'Integração com Assistente de IA - Gatinho'
+        ],
+        // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
+        image: '/public/assets/projetos/SistemaEmpregos.png',
+        gradient: 'from-blue-500 to-blue-500'
+    },
+
+    {
+        id: 'participacao',
+        name: 'Sistema de Participação Cidadã',
+        title: 'Tornando a sua cidade mais democrática',
+        description: 'Sistema de Participação Cidadã que possibilita a participação da população na tomada de decisões',
+        features: [
+            'Criação de Propostas e Votações',
+            'Criação de Debates Interativos',
+            'Denúncias e Sugestões Anônimas',
+            'Relatórios e Dashboards Dinâmicos'
+        ],
+        // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
+        image: '/public/assets/projetos/SistemaParticipacao.png',
+        gradient: 'from-brand-purple to-purple-500'
+    },
+
+    {
+        id: 'turismo',
+        name: 'Sistema de Turismo',
+        title: 'Colocando a sua cidade no mapa',
+        description: 'Website que possibilita a publicação de locais turisticos da cidade',
+        features: [
+            'Publicação de locais turisticos',
+            'Mapa interativo',
+            'Recomendações de locais turisticos',
+            'Assistente IA de Turismo'
+        ],
+        // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
+        image: '/public/assets/projetos/SistemaTurismo.jpg',
+        gradient: 'from-brand-purple to-yellow-500'
+    },
+
+    {
+        id: 'assistente',
+        name: 'Assistente IA',
+        title: 'Atendente Virtual Municipal',
+        description: 'Assistente IA que possibilita a interação e acesso às informações da cidade com a população da cidade',
+        features: [
+            'Interação com a população da cidade',
+            'Acesso às informações da cidade',
+            'Atendimento 24/7',
+            'Tirar duvidas'
+        ],
+        // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
+        image: '/public/assets/projetos/assistente.png',
+        gradient: 'from-brand-purple to-red-500'
     }
 ];
 
