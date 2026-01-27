@@ -41,7 +41,7 @@ const products: ServiceProduct[] = [
             'Insights e Relatórios Inteligentes'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/public/assets/projetos/SistemaCursos.png',
+        image: '/assets/projetos/SistemaCursos.png',
         gradient: 'from-brand-purple to-pink-500'
     },
 
@@ -57,7 +57,7 @@ const products: ServiceProduct[] = [
             'Integração com Assistente de IA - Gatinho'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/public/assets/projetos/SistemaLinks.png',
+        image: '/assets/projetos/SistemaLinks.png',
         gradient: 'from-brand-purple to-green-500'
     },
 
@@ -73,7 +73,7 @@ const products: ServiceProduct[] = [
             'Integração com Assistente de IA - Gatinho'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/public/assets/projetos/SistemaEmpregos.png',
+        image: '/assets/projetos/SistemaEmpregos.png',
         gradient: 'from-blue-500 to-blue-500'
     },
 
@@ -89,7 +89,7 @@ const products: ServiceProduct[] = [
             'Relatórios e Dashboards Dinâmicos'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/public/assets/projetos/SistemaParticipacao.png',
+        image: '/assets/projetos/SistemaParticipacao.png',
         gradient: 'from-brand-purple to-purple-500'
     },
 
@@ -105,7 +105,7 @@ const products: ServiceProduct[] = [
             'Assistente IA de Turismo'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/public/assets/projetos/SistemaTurismo.jpg',
+        image: '/assets/projetos/SistemaTurismo.jpg',
         gradient: 'from-brand-purple to-yellow-500'
     },
 
@@ -121,7 +121,7 @@ const products: ServiceProduct[] = [
             'Tirar duvidas'
         ],
         // Placeholder image as user only provided one for planning, reverting to same or gatinho if needed, but keeping logic generic
-        image: '/public/assets/projetos/assistente.png',
+        image: '/assets/projetos/assistente.png',
         gradient: 'from-brand-purple to-red-500'
     }
 ];
