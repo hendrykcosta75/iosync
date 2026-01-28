@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="https://example.com/contato"
+              href="/contato"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full font-semibold text-white border border-white/10 hover:bg-white/5 transition-colors"

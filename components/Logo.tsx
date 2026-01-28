@@ -8,8 +8,8 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ 
   className = "", 
-  height = "h-20 md:h-32",
-  src = "https://i.ibb.co/hJjZ09dx/Logo-1.png"
+  height = "h-20 md:h-24",
+  src = "/assets/Logo (1).png"
 }) => {
   return (
     <div className={`relative flex items-center group select-none ${className}`}>
